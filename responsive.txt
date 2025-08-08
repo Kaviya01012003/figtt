@@ -1,0 +1,17 @@
+| Device Type                   | Common Width                  |
+| ----------------------------- | ----------------------------- |
+| Extra small phones            | **320px**                     |
+| Small phones                  | **375px** (iPhone X, 12)      |
+| Large phones                  | **414px** (iPhone 11 Pro Max) |
+| Small tablets                 | **600px**                     |
+| Tablets                       | **768px** (iPad portrait)     |
+| Large tablets / small laptops | **992px**                     |
+| Laptops                       | **1024px**                    |
+| Desktops                      | **1280px**                    |
+
+
+		      ** ,responsive **
+
+
+| Large desktops                | **1440px**                    |
+| Ultra-wide                    | **1920px+**                   |

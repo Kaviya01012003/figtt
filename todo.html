@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list using table </title>
+    <style>
+        table{
+            width:100%;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th{
+            background-color: blueviolet;
+        }
+        .completed{
+            text-decoration: line-through;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button onclick="addTask()">Add Task</button>
+
+    <table id="todoTable">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th> Status</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Tasks will be added here by JavaScript -->
+        </tbody>
+    </table>
+    <script>
+        function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskText = taskInput.value.trim();
+
+    if (taskText === '') {
+        alert('Please enter a task!');
+        return;
+    }
+
+    const todoTableBody = document.querySelector('#todoTable tbody');
+    const newRow = todoTableBody.insertRow();
+
+    // Task Cell
+    const taskCell = newRow.insertCell(0);
+    //taskCell.textContent = taskText;
+    taskCell.addEventListener('click', function() {
+        taskCell.classList.toggle('completed');
+    });
+
+    //Actions Cell
+    const statuscell=newRow.insertCell(1);
+    const statusbutton = document.createElement('button');
+    statusbutton.textContent='progress';
+    statusbutton.onclick=function(){
+        statusbutton.textContent="Completed";
+    };
+    statuscell.appendChild(statusbutton);
+
+    const actionsCell = newRow.insertCell(2);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.onclick = function() {
+        newRow.remove();
+    };
+    actionsCell.appendChild(deleteButton);
+
+    taskInput.value = ''; // Clear the input field
+}
+    </script>
+</body>
+</html>

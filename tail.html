@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .blumber img {
+      height: 40px;
+    }
+
+    .right-side {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-adduser, .btn1, .search {
+      background-color: #fd7622;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .switch-role {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .img img {
+      height: 30px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .profile img {
+      border-radius: 50%;
+    }
+
+   
+   .btn-info{
+    display:none;
+   }
+    .collapse button{
+      color: #fd7622;
+      display: none;
+    }
+   
+    /* Responsive section */
+    @media (max-width: 900px) {
+      .right-side {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        padding: 15px;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        z-index: 999;
+      }
+      .btn-info,
+      .collapse button{
+        display: block;
+      }
+      
+     
+      
+      
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <!-- Brand --> <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+   <button >job</button>
+   <button >Applicant</button>
+  </div>
+    <div class="blumber">
+      <img src="./image1/Group.png" alt="Logo">
+    </div>
+
+    <!-- Hidden checkbox toggle -->
+  
+
+    <!-- Right-side content -->
+    <div class="right-side">
+      <button class="btn-adduser">
+        <span class="icon">+</span>
+        <span class="label">Add User</span>
+      </button>
+
+      <div class="btn switch-role bg-white">
+        <span class="small">Switch to <span class="admin">ADMIN ROLE</span></span>
+        <button class="btn1">HR ROLE</button>
+      </div>
+
+      <button class="search"><i class="fa fa-search"></i></button>
+
+      <div class="img"><img src="./image1/Group 1171276896.png" alt=""></div>
+      <div class="vr" style="width: 1px; background: #888; height: 24px;"></div>
+
+      <div class="profile">
+        <img src="./image1/Indian student profile image.png" alt="Profile" width="36" height="36">
+        <div>
+          <div class="fw-semibold">Sidharth</div>
+          <div class="small">Admin</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</body>
+</html>

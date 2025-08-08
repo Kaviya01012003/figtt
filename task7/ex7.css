@@ -1,0 +1,47 @@
+body{
+  font-family: "inter";
+  /* background-color: black; */
+}
+
+body div{
+  background-position-x: center;
+  padding-bottom: 16px;
+}
+.rocket{
+    font-family: 'Plus Jakarta Sans' !important;
+    font-weight: 700;
+    font-size: 13.5px;
+    line-height: 174%;
+    color: black;
+    padding: 6px 18px;
+    border-radius: 7.5px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.digital-platform h1{
+    font-family: 'Plus Jakarta Sans' !important;
+    font-weight: 800;
+   font-size: 48.28px;           /* (1366 / 1470) * 52 */
+    line-height: 69.69px;         /* (1366 / 1470) * 75 */
+    letter-spacing: -1.34px; 
+    color: white;
+}
+.digital-platform p{
+    font-weight: 400;
+   font-size: 15px;           /* (1366 / 1470) * 52 */
+    line-height: 174%;         /* (1366 / 1470) * 75 */
+    letter-spacing: 0; 
+    color: white;
+}
+.quote{
+    background-color: rgba(20, 104, 251, 1);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 24.75px;
+}
+.contact{
+     background-color: transparent;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 24.75px;
+    border: 1.5px solid rgba(255, 255, 255, 1);
+}

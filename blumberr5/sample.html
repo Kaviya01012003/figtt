@@ -1,0 +1,533 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>:has() Vertical Tabs</title>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+ 
+   .container {
+    display: flex;
+    flex: 1;
+  }
+
+   
+
+input[type="radio"]#tab1:checked + label .tab-border,
+input[type="radio"]#tab2:checked + label .tab-border,
+input[type="radio"]#tab3:checked + label .tab-border,
+input[type="radio"]#tab4:checked + label .tab-border,
+input[type="radio"]#tab5:checked + label .tab-border,
+input[type="radio"]#tab6:checked + label .tab-border {
+  border-color: #F6048D;
+ 
+}
+input[type="radio"]#tab1:checked + label p,
+input[type="radio"]#tab2:checked + label p,
+input[type="radio"]#tab3:checked + label p,
+input[type="radio"]#tab4:checked + label p,
+input[type="radio"]#tab5:checked + label p,
+input[type="radio"]#tab6:checked + label p {
+  color:black;
+}
+input[type="radio"]#tab1:checked + label span,
+input[type="radio"]#tab2:checked + label span,
+input[type="radio"]#tab3:checked + label span,
+input[type="radio"]#tab4:checked + label span,
+input[type="radio"]#tab5:checked + label span,
+input[type="radio"]#tab6:checked + label span {
+  color:rgba(1, 2, 5, 1);
+}
+
+input[type="radio"]#tab1:checked + label .tab-head,
+input[type="radio"]#tab2:checked + label .tab-head,
+input[type="radio"]#tab3:checked + label .tab-head,
+input[type="radio"]#tab4:checked + label .tab-head,
+input[type="radio"]#tab5:checked + label .tab-head,
+input[type="radio"]#tab6:checked + label .tab-head{
+  background: linear-gradient( to right, #B31AEF 0%, #F6048D 19.07%, #F88C54 47.52%, #FF7670 60.87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tab-content {
+  display: none;
+}
+
+.scroll-tabs {
+  max-height: 350px; 
+  overflow-y: auto;
+  scrollbar-width: none; 
+}
+
+.tab-content-area {
+  height: 350px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-content {
+  display: none;
+  height: 100%;
+}
+
+.tab-content img {
+  height: 100%; 
+  width: auto;
+  object-fit: cover; 
+}
+
+.scroll-tabs:has(#tab1:checked) ~ .tab-content-area #content1,
+.scroll-tabs:has(#tab2:checked) ~ .tab-content-area #content2,
+.scroll-tabs:has(#tab3:checked) ~ .tab-content-area #content3,
+.scroll-tabs:has(#tab4:checked) ~ .tab-content-area #content4,
+.scroll-tabs:has(#tab5:checked) ~ .tab-content-area #content5,
+.scroll-tabs:has(#tab6:checked) ~ .tab-content-area #content6 {
+  display: flex;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container flex gap-8">
+  <div class="flex flex-col flex-1   mt-4 scroll-tabs ">
+    <input type="radio" name="migration-tab" id="tab1" class="hidden peer/tab1" checked />
+    <label for="tab1" class="tab-item">
+        <div class="flex flex-row items-center">
+              <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">01</p>
+              <div class="tab-border border-l-4 -ml-2 pl-6 py-2 text-left border-transparent">
+                  <img src="./image/page2/cloud.png" alt="cloud" class="w-7 ml-2">
+
+                  <p class="tab-head font-semibold text-[17px] leading-[26px] text-left text-[#18191C]">
+                      Cloud Migration Services
+                  </p>
+                  <span class="font-normal text-[13px] leading-[157%] text-left text-[#767A85] block">
+                      For acquiring transition, we are ready to develop from a basic level app to a <br />
+                      complex one without costing a single penny.
+                  </span>
+              </div>
+        </div>
+    </label>
+    <input type="radio" name="migration-tab" id="tab2" class="hidden peer/tab2" checked />
+    <label for="tab2" class="tab-item">
+      <div class="flex flex-row items-center">
+          <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">02</p>
+
+            <div class="tab-border border-l-4 -ml-2 pl-6 py-2 text-left border-transparent">
+                <img src="./image/page2/smartphone.png" alt="cloud" class="w-7 ml-2">
+                <p class="tab-head font-semibold text-[17px] leading-[26px] text-left text-[#18191C]">
+                    App Migration
+                </p>
+                <span class="font-normal text-[13px] leading-[157%] text-left text-[#767A85] block">
+                    Our techies offer 100% flexibility of app migration and enhance IT <br />
+                    infrastructure to cloud services.
+                </span>
+            </div>
+      </div>
+    </label>
+    <input type="radio" name="migration-tab" id="tab3" class="hidden peer/tab3" checked />
+    <label for="tab3" class="tab-item">
+        <div class="flex flex-row items-center">
+            <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">03</p>
+            <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-transparent ">
+                <img src="./image/page2/integration.png" alt="cloud" class="w-7 ml-2">
+                <p class="  tab-head font-semibold text-[17px] leading-[26px] text-left text-[#18191C]">
+                      Framework Migration
+                </p>
+                <span class="font-normal text-[13px] leading-[157%] text-left text-[#767A85] block">
+                    We provide overall control for the integration process and 100% security <br />
+                    accreditations.
+                </span>
+            </div>
+        </div>
+    </label>
+    <input type="radio" name="migration-tab" id="tab4" class="hidden peer/tab4" checked />
+    <label for="tab4" class="tab-item">
+        <div class="flex flex-row items-center">
+            <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">04</p>
+            <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-transparent ">
+                <img src="./image/page2/migration.png" alt="cloud" class="w-7 ml-2">
+                <p class="  tab-head font-semibold text-[17px] leading-[26px] text-left text-[#18191C]">
+                      Data Migration
+                </p>
+                <span class="font-normal text-[13px] leading-[157%] text-left text-[#767A85] block">
+                    We are fully-fledged to meet the client’s requirements and operate data migration & compliance with security standards.
+                </span>
+            </div>
+        </div>
+    </label>
+    <input type="radio" name="migration-tab" id="tab5" class="hidden peer/tab5" checked />
+    <label for="tab5" class="tab-item">
+        <div class="flex flex-row items-center">
+            <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">05</p>
+            <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-transparent ">
+                <img src="./image/page2/cloud-enable.png" alt="cloud" class="w-7 ml-2">
+                <p class="  tab-head font-semibold text-[17px] leading-[26px] text-left text-[#18191C]">
+                      Cloud-enabled Native Proficiencies
+                </p>
+                <span class="font-normal text-[13px] leading-[157%] text-left text-[#767A85] block">
+                    Acquire the cloud proficiencies for your cloud and website by processing changes whenever needed.
+                </span>
+            </div>
+        </div>
+    </label>
+    <input type="radio" name="migration-tab" id="tab6" class="hidden peer/tab6" checked />
+    <label for="tab6" class="tab-item">
+        <div class="flex flex-row items-center">
+            <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">06</p>
+            <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-transparent ">
+                <img src="./image/page2/cloud-enable.png" alt="cloud" class="w-7 ml-2">
+                <p class="  tab-head font-semibold text-[17px] leading-[26px] text-left text-[#18191C]">
+                      Cloud Managed Services
+                </p>
+                <span class="font-normal text-[13px] leading-[157%] text-left text-[#767A85] block">
+                    Acquire the cloud proficiencies for your cloud and website by processing changes whenever needed.
+                </span>
+            </div>
+        </div>
+    </label>
+                        
+  </div>
+
+  <div class="tab-content-area flex-1 flex items-center justify-center">
+    <div id="content1" class="tab-content">
+      <img src="./image/page2/girl.png" alt="girl 1">
+    </div>
+    <div id="content2" class="tab-content">
+      <img src="./image/page3/team.png" alt="girl 2" >
+    </div>
+    <div id="content3" class="tab-content">
+      <img src="./image/page2/girl.png" alt="girl 3" >
+    </div>
+      <div id="content4" class="tab-content">
+      <img src="./image/page3/team.png" alt="girl 1" >
+    </div>
+    <div id="content5" class="tab-content">
+      <img src="./image/page2/girl.png" alt="girl 2" >
+    </div>
+    <div id="content6" class="tab-content">
+      <img src="./image/page3/team.png" alt="girl 3" >
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .radio-itemdiv {
+  display: flex;
+  flex: 1;
+  }
+input[type="radio"]#tab1:checked + label .tab-border,
+input[type="radio"]#tab2:checked + label .tab-border,
+input[type="radio"]#tab3:checked + label .tab-border,
+input[type="radio"]#tab4:checked + label .tab-border,
+input[type="radio"]#tab5:checked + label .tab-border,
+input[type="radio"]#tab6:checked + label .tab-border {
+  border-color: #F6048D;
+  /* background: rgba(246, 4, 141, 0.1); */
+}
+input[type="radio"]#tab1:checked + label p,
+input[type="radio"]#tab2:checked + label p,
+input[type="radio"]#tab3:checked + label p,
+input[type="radio"]#tab4:checked + label p,
+input[type="radio"]#tab5:checked + label p,
+input[type="radio"]#tab6:checked + label p {
+  color:black;
+}
+input[type="radio"]#tab1:checked + label span,
+input[type="radio"]#tab2:checked + label span,
+input[type="radio"]#tab3:checked + label span,
+input[type="radio"]#tab4:checked + label span,
+input[type="radio"]#tab5:checked + label span,
+input[type="radio"]#tab6:checked + label span {
+  color:rgba(1, 2, 5, 1);
+}
+input[type="radio"]#tab1:checked + label .tab-head,
+input[type="radio"]#tab2:checked + label .tab-head,
+input[type="radio"]#tab3:checked + label .tab-head,
+input[type="radio"]#tab4:checked + label .tab-head,
+input[type="radio"]#tab5:checked + label .tab-head,
+input[type="radio"]#tab6:checked + label .tab-head{
+  background: linear-gradient( to right, #B31AEF 0%, #F6048D 19.07%, #F88C54 47.52%, #FF7670 60.87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tab-content {
+  display: none;
+}
+.scroll-tabs {
+  max-height: 450px; 
+  overflow-y: auto;
+  scrollbar-width: none; 
+}
+.tab-content-area {
+  height: 450px; 
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.tab-content {
+  display: none;
+  height: 100%;
+}
+.tab-content img {
+  height: 450px; 
+  width: auto;
+  object-fit: cover; 
+}
+
+.scroll-tabs:has(#tab1:checked) ~ .tab-content-area #content1,
+.scroll-tabs:has(#tab2:checked) ~ .tab-content-area #content2,
+.scroll-tabs:has(#tab3:checked) ~ .tab-content-area #content3,
+.scroll-tabs:has(#tab4:checked) ~ .tab-content-area #content4,
+.scroll-tabs:has(#tab5:checked) ~ .tab-content-area #content5,
+.scroll-tabs:has(#tab6:checked) ~ .tab-content-area #content6 {
+  display: flex;
+}
+label div{
+  padding-bottom: 0 !important;
+}
+.tab-head{
+  font-weight: 600;         
+  font-size: 17px;          
+  line-height: 26px;        
+  text-align: left;        
+  color: #18191C;
+  padding: 0.5rem 0 1rem 0;
+}
+.tab-subhead{
+   font-weight: 400;       /* font-normal */
+  font-size: 13px;        /* text-[13px] */
+  line-height: 157%;      /* leading-[157%] */
+  text-align: left;       /* text-left */
+  color: #767A85;         /* text-[#767A85] */
+  display: block;         /* block */
+  padding-bottom: 1.5rem;
+}
+.flex-img{
+  display: none;
+}
+@media screen and (max-width: 769px) {
+   .tab-content-area {
+    height: auto;
+    display: none;
+  }
+ }
+@media screen and (max-width: 768px) {
+  .radio-itemdiv {
+    flex-direction: column;
+  }
+
+  .scroll-tabs {
+    max-height: unset;
+    overflow-y: visible;
+    margin-bottom: 2rem;
+  }
+
+
+  .tab-content img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .tab-head {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .tab-subhead {
+    font-size: 13px;
+    line-height: 150%;
+  }
+
+  .tab-item {
+    padding: 1rem 0;
+  }
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;  
+  justify-content: space-between;
+  gap: 1rem; 
+}
+
+label > div {
+  flex: 1 1 50%;         
+  display: flex;
+  /* flex-direction: column; */
+}
+.flex-img {
+  flex: 1 1 50%;         
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+}
+.flex-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+label > div + .flex-img {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 50%;
+  justify-content: center; /* center the image inside */
+}
+
+
+}
+  </style>
+</head>
+<body>
+  <div class="flex flex-col md:flex-row gap-12 mt-8 ">
+                <div class="radio-itemdiv">
+                        <div class="flex flex-col flex-1 gap-0 mt-2 scroll-tabs ">
+                            <input type="radio" name="migration-tab" id="tab1" class="hidden peer/tab1" checked />
+                            <label for="tab1" class="tab-item">
+                                <div class="flex flex-row items-center">
+                                    <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">01</p>
+                                    <div class="tab-border border-l-4 -ml-2 pl-6 py-2 text-left border-gray-300">
+                                        <img src="./image/page2/cloud.png" alt="cloud" class="w-7 ml-2">
+
+                                        <p class="tab-head ">
+                                            Cloud Migration Services
+                                        </p>
+                                        <span class="tab-subhead">
+                                            For acquiring transition, we are ready to develop from a basic level app to a <br />
+                                            complex one without costing a single penny.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-img flex flex-row flex-[1_1_50%] w-[300px]"><img src="./image/page2/girl.png" alt=""></div>
+                            </label>
+                            
+                            <input type="radio" name="migration-tab" id="tab2" class="hidden peer/tab2" checked />
+                            <label for="tab2" class="tab-item">
+                            <div class="flex flex-row items-center">
+                                <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">02</p>
+
+                                    <div class="tab-border border-l-4 -ml-2 pl-6 py-2 text-left border-gray-300">
+                                        <img src="./image/page2/smartphone.png" alt="cloud" class="w-7 ml-2">
+                                        <p class="tab-head ">
+                                            App Migration
+                                        </p>
+                                        <span class="tab-subhead">
+                                            Our techies offer 100% flexibility of app migration and enhance IT <br />
+                                            infrastructure to cloud services.
+                                        </span>
+                                    </div>
+                            </div>
+                            <div class="flex-img flex flex-row flex-[1_1_50%] w-[300px]"><img src="./image/page2/girl.png" alt=""></div>
+                            </label>
+                            <input type="radio" name="migration-tab" id="tab3" class="hidden peer/tab3" checked />
+                            <label for="tab3" class="tab-item">
+                                <div class="flex flex-row items-center">
+                                    <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">03</p>
+                                    <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-gray-300 ">
+                                        <img src="./image/page2/integration.png" alt="cloud" class="w-7 ml-2">
+                                        <p class="  tab-head ">
+                                            Framework Migration
+                                        </p>
+                                        <span class="tab-subhead">
+                                            We provide overall control for the integration process and 100% security <br />
+                                            accreditations.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-img flex flex-row flex-[1_1_50%] w-[300px]"><img src="./image/page2/girl.png" alt=""></div>
+                            </label>
+                            <input type="radio" name="migration-tab" id="tab4" class="hidden peer/tab4" checked />
+                            <label for="tab4" class="tab-item">
+                                <div class="flex flex-row items-center">
+                                    <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">04</p>
+                                    <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-gray-300 ">
+                                        <img src="./image/page2/migration.png" alt="cloud" class="w-7 ml-2">
+                                        <p class="  tab-head ">
+                                            Data Migration
+                                        </p>
+                                        <span class="tab-subhead">
+                                            We are fully-fledged to meet the client’s requirements and operate data migration & compliance with security standards.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-img flex flex-row flex-[1_1_50%] w-[300px]"><img src="./image/page2/girl.png" alt=""></div>
+                            </label>
+                            <input type="radio" name="migration-tab" id="tab5" class="hidden peer/tab5" checked />
+                            <label for="tab5" class="tab-item">
+                                <div class="flex flex-row items-center">
+                                    <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">05</p>
+                                    <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-gray-300 ">
+                                        <img src="./image/page2/cloud-enable.png" alt="cloud" class="w-7 ml-2">
+                                        <p class="  tab-head ">
+                                            Cloud-enabled Native Proficiencies
+                                        </p>
+                                        <span class="tab-subhead">
+                                            Acquire the cloud proficiencies for your cloud and website by processing changes whenever needed.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-img w-[300px]"><img src="./image/page2/girl.png" alt=""></div>
+                            </label>
+                            <input type="radio" name="migration-tab" id="tab6" class="hidden peer/tab6" checked />
+                            <label for="tab6" class="tab-item">
+                                <div class="flex flex-row items-center">
+                                    <p class="font-bold text-[17px] leading-[157%] text-left pr-10 text-[#767A85]">06</p>
+                                    <div class="tab-border border-l-4  -ml-2 pl-6 py-2 text-left border-gray-300">
+                                        <img src="./image/page2/cloud-enable.png" alt="cloud" class="w-7 ml-2">
+                                        <p class="  tab-head ">
+                                            Cloud Managed Services
+                                        </p>
+                                        <span class="tab-subhead">
+                                            Acquire the cloud proficiencies for your cloud and website by processing changes whenever needed.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-img flex flex-row flex-[1_1_50%] w-[300px]"><img src="./image/page2/girl.png" alt=""></div>
+                            </label>
+                            
+                        </div>
+
+                        <!-- Content area -->
+                        <div class="tab-content-area flex-1 flex items-center justify-center">
+                            <div id="content1" class="tab-content">
+                            <img src="./image/page2/girl.png" alt="girl 1">
+                            </div>
+                            <div id="content2" class="tab-content">
+                            <img src="./image/page3/team.png" alt="girl 2" >
+                            </div>
+                            <div id="content3" class="tab-content">
+                            <img src="./image/page2/girl.png" alt="girl 3" >
+                            </div>
+                            <div id="content4" class="tab-content">
+                            <img src="./image/page3/team.png" alt="girl 1" >
+                            </div>
+                            <div id="content5" class="tab-content">
+                            <img src="./image/page2/girl.png" alt="girl 2" >
+                            </div>
+                            <div id="content6" class="tab-content">
+                            <img src="./image/page3/team.png" alt="girl 3" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</body>
+</html>

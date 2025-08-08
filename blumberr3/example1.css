@@ -1,0 +1,506 @@
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body{
+  font-family: "inter";
+  background-color:black ;
+  margin: 0;
+  background-image: url(./image1/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+.container {
+align-items: center;
+/* position: absolute;  */
+  display: inline-block;
+  padding: 3rem; 
+}
+.cloud-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.cloud-card-text {
+  flex: 1 1 55%;
+}
+.cloud-card-text h1 {
+  font-size: 40px;
+  line-height: 130%;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.cloud-card-text p {
+  font-size: 16px;
+  line-height: 165%;
+  font-weight: 400;
+}
+.cloud-icon {
+  margin-bottom: 1rem;
+}
+.text-orange {
+  background: linear-gradient(to right, rgba(248, 140, 84, 1), rgba(255, 118, 112, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-pink {
+  background: linear-gradient(to right, rgba(179, 26, 239, 1), rgba(246, 4, 141, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cloud-card-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.cloud-card-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.second-section{
+  width: 100%;
+  margin-top: 18rem;
+}
+.maintext{
+    font-size: 42px;
+  line-height: 130%;
+  font-weight: 700;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
+   text-align: center;
+}
+.gradient-text {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtext {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0%;
+   line-height: 145%;
+  margin-bottom: 1rem;
+      text-align: center;
+}
+.card-grid-horizontal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.card-horizontal {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  backdrop-filter: blur(42px);
+  -webkit-backdrop-filter: blur(42px); 
+}
+.card-content{
+  align-items: center;
+  padding: 0.5rem;
+}
+.icon-left {
+  width: 50px;
+  margin: 0.5rem;
+  align-items: center;
+}
+.card-content h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 0%;
+  margin: 1rem 0;
+}
+.card-content p {
+    font-weight: 400;
+      font-size: 16px;
+    line-height: 160%;
+  letter-spacing: 0%;
+    color:rgba(255, 255, 255, 1);
+    /* margin-bottom: 1rem; */
+}
+
+@media (max-width: 1164px) {
+ body{
+  background-size: auto;
+ }
+ .container{
+  padding: 1rem;
+ }
+  .cloud-card {
+    flex-direction: column;
+    text-align: center;
+    position: static;
+  }
+  .team{
+    width: 50%;
+  }
+  .cloud-card-text, .cloud-card-image {
+    flex: 1 1 100%;
+  }
+
+  .cloud-card-text h1 {
+    font-size: 32px;
+  }
+
+  .cloud-card-text p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .card-content{
+    margin-right: 0.5rem;
+  }
+  .second-section {
+    top: 6rem;
+    position: relative;
+  }
+
+  .maintext {
+    font-size: 32px;
+  }
+  .maintext br{
+    display: none;
+  }
+  .subtext {
+    font-size: 16px;
+  }
+  .subtext br{
+    display: none;
+  }
+  .card-grid-horizontal {
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+  }
+
+}
+@media (max-width: 600px) {
+  body{
+    background-size: auto; 
+ }
+.container{
+  padding: 1rem;
+ }
+  .cloud-card {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+  .cloud-card-text h1 {
+    font-size: 26px;
+    line-height: 120%;
+  }
+  .cloud-card-text p {
+    font-size: 14px;
+    line-height: 160%;
+  }
+  .cloud-card-image img {
+    max-width: 90%;
+  }
+  .second-section { 
+    top: 8rem;
+  }
+  .maintext {
+    font-size: 24px;
+  }
+.maintext br{
+  display: none;
+}
+  .subtext {
+    font-size: 13px;
+  }
+.subtext br{
+  display: none;
+}
+  .card-grid-horizontal {
+    grid-template-columns: 1fr;
+  }
+  .card-horizontal {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0; 
+  }
+  .icon-left {
+    margin: 0.5rem ;
+    height: 70%;
+    width: 30px;
+    align-items: center;
+  }
+  .card-content{
+    margin: 0;
+  }
+  .card-content h3 {
+    font-size: 18px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .card-content p {
+    font-size: 13px;
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-size: auto;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .cloud-card {
+    flex-direction: column;
+    padding: 1rem 0.75rem;
+  }
+
+  .cloud-card-text h1 {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  .cloud-card-text p {
+    font-size: 13px;
+    line-height: 160%;
+  }
+
+  .cloud-card-image img {
+    max-width: 100%;
+  }
+
+  .second-section {
+    top: 8rem;
+  }
+
+  .maintext {
+    font-size: 20px;
+  }
+
+  .maintext br {
+    display: none;
+  }
+
+  .subtext {
+    font-size: 12px;
+  }
+
+  .subtext br {
+    display: none;
+  }
+
+  .card-grid-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .card-horizontal {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .icon-left {
+    width: 24px;
+    height: auto;
+    margin-right: 0.75rem;
+  }
+
+  .card-content {
+    margin: 0;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .card-content p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+
+
+/* rough */
+
+@media (max-width: 1024px){
+    .team-cloud{
+        flex-wrap: wrap;
+        gap:0.5rem;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    .page3{
+        background-position-x: center;
+    }
+      .con2-head {
+    font-size: 32px;
+    margin-top: 16rem;
+  }
+
+  .card-grid-horizontal {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+  }
+  .left-cloud {
+    text-align: center !important;
+    align-items: center !important;
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+
+  .right-cloud img {
+    width: 550px;
+  }
+
+  .left-cloud div {
+    font-size: 40px;
+  }
+  .card-horizontal{
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+    text-align: center !important;
+    margin-top: 0.5rem;
+    /* flex-direction: column; */
+  }
+ 
+  /* .icon-left {
+   
+  transform: rotate(90deg);
+  text-align: center;
+} */
+
+
+}
+@media(max-width:850px){
+    .con2-head {
+    font-size: 26px;
+    margin-top: 20rem;
+  }
+  .right-cloud img {
+    width: 650px;
+  }
+
+}
+@media (max-width: 768px) {
+  .team-cloud {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .left-cloud,
+  .right-cloud {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .left-cloud div {
+    font-size: 28px;
+  }
+
+  .left-cloud p {
+    font-size: 14px;
+    line-height: 160%;
+    text-align: justify !important;
+  }
+
+  .right-cloud img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 5rem;
+  }
+
+  .con2-head {
+    font-size: 20px;
+    margin-top: 22rem;
+  }
+
+  .con2-text {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    padding: 0;
+   
+  }
+  .con2-text br{
+    display: none;
+  }
+  .card-grid-horizontal {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .card-horizontal {
+    /* flex-direction: column; */
+    align-items: left !important;
+    padding: 1rem;
+    text-align: left !important;
+    
+  }
+
+  .icon-left {
+    width: 40px;
+    margin: 0 auto;
+  }
+
+  .card-content {
+    margin-left: 0;
+    gap: 8px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+    margin: 0.5rem 0;
+  }
+
+  .card-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .page3{
+    padding-top: 5rem !important;
+  }
+  .left-cloud div {
+    font-size: 24px;
+  }
+ .right-cloud img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 8rem;
+    margin-top: 5rem;
+  }
+
+  .con2-head {
+    font-size: 18px;
+    margin-top: 22rem;
+   
+  }
+  .con2-head br{
+    display: none !important;
+  }
+  .con2-text{
+    text-align: justify !important;
+  }
+  .card-content p {
+    font-size: 13px;
+  }
+}

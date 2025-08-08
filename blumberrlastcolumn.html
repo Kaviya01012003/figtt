@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background:linear-gradient(to right, #8196f1, #b8c2f0);
+    border-radius:6px 0 0 6px;
+    border-radius: 0.3rem;
+    box-shadow: 3px 0 0 #ff6d00;
+    width: fit-content;
+min-width: 190px;
+
+height: fit-content;
+min-height: 36px;
+top: 182px;
+left: 20px;
+gap: 16px;
+
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar gap-5 " style="background-color: whitesmoke;">
+ <p class="text-uppercase small text-muted mb-3">Menu</p>      
+  <a class="active  btn-sm align-items-center mb-2 px-3 py-1 border-0 rounded-2 custom-button" style="font-family: Poppins; font-weight: 500; font-style: medium; font-size: 16px; line-height: 24px;" href="#jobs"><i class="bi bi-briefcase-fill me-2" style="color: orange; font-size: 1.2rem;"></i>
+              <span class="fw-semibold text-dark">Jobs</span></a>
+  <a class=" btn-sm align-items-center mb-2 px-3 py-2 border-0 custom-button"style="font-family: Poppins; font-weight: 500; font-style: medium; font-size: 16px; line-height: 24px;" href="#news"> <i class="bi bi-people me-2" style="color: orange; font-size: 1.2rem;"></i>
+              <span class="fw-semibold text-dark">Applicants</span></a>
+
+</div>
+
+<div class=" content container ">
+  <div class="row ">
+    <div class="col-xl d-flex px-3" style="width: 40%;">
+      <div class="card shadow-sm border-0 rounded-4 p-4">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class=" text-dark mb-1 py-1" style="font-family: Poppins; font-weight: 600; font-size: 20px; line-height: 100%;">Senior physician</div>
+                    <div class="mb-1 text-primary fw-semibold py-1" style="font-family: Poppins; font-weight: 600; font-size: 13px; line-height: 20px; letter-spacing: 4%;">JOB ID : APPE001</div>
+
+                    <div class="text-dark py-1" style="font-family: Poppins; font-weight: 900; font-style: medium; font-size: 15px; line-height: 20px;"><i class="bi bi-geo-alt-fill me-2" ></i>Bengaluru, Karnataka <i class="bi bi-briefcase"></i> 0 - 3 Years</div>
+                    
+                    <div class="text-dark py-1" style="font-family: Poppins; font-weight: 900; font-style: medium; font-size: 15px; line-height: 20px;"><i class="bi bi-envelope-fill me-2" ></i>gowthamhospital@career.in</div>
+                    <div class="text-dark mb-2 py-1" style="font-family: Poppins; font-weight: 900; font-style: medium; font-size: 15px; line-height: 20px;"><i class="bi bi-cash me-1"></i> ₹30,000 - ₹30,000</div>
+                    <button class="border-0 border-secondary-subtle px-3 py-1 rounded-pill text-dark" style="background-color:#FF6A001A; cursor:pointer; width: 87px; height: 28px; padding-top: 4px; padding-right: 12px; padding-bottom: 4px; padding-left: 12px; border-radius: 50px; gap: 8px; font-family: Poppins; font-weight: 500; font-style: medium; font-size: 14px ; line-height: 20px; text-align: center; ">
+                      Full Time
+                    </button>
+
+                    <!-- <button><span class="badge  border border-secondary-subtle px-3 py-2 rounded-pill text-dark" style="background-color:#e288481a ">Full Time</span></button> -->
+                </div>
+
+                <div class="dropdown">
+                  <a class="btn text-white dropdown-toggle"style="background-color: #fd7622; border-radius: 1rem; width: fit-content; min-width: 105px; height: fit-content; min-height: 36px;" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Active
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+                    <li><a class="dropdown-item" href="#">Active</a></li>
+                    <li><a class="dropdown-item" href="#">progress</a></li>
+                    <li><a class="dropdown-item" href="#">hold</a></li>
+                    <li><a class="dropdown-item" href="#">process end</a></li>
+                  </ul>
+                </div>
+                
+
+            </div>
+
+        
+
+        <div class="mt-3 py-2" >
+          <h6 class="text-secondary " style="font-family: Poppins; font-style: medium; font-weight: 500; font-size: 16px; line-height: 150%;">Role Summary</h6>
+          <ul class="text-muted small " style="font-family: Poppins; font-style: normal; font-weight: 400; font-size: 15px; line-height: 180%;">
+            <li><h6>A Senior Physician is responsible for diagnosing and treating patients, managing teams, and ensuring high-quality care.</h6></li>
+            <li><h6>They mentor junior physicians and stay updated on medical advancements.</h6> </li>
+          </ul>
+
+          <h6 class="text-secondary" style="font-family: Poppins; font-style: medium; font-weight: 500; font-size: 16px; line-height: 150%;">Key Responsibilities</h6>
+          <ul class="text-muted small" style="font-family: Poppins; font-style: normal; font-weight: 400; font-size: 15px; line-height: 180%;">
+            <li><h6> Diagnose and treat complex medical conditions,ensuring high standards of patient care.</h6></li>
+            <li><h6> Develop and oversee comprehensive treatment plans, adjusting them based on patient response.</h6></li>
+            <li><h6>Lead and mentor junior physicians, residents, and healthcare staff.</h6></li>
+            <li><h6>Stay updated with latest medical research and integrate evidence-based practices into patient care.</h6></li>
+            <li><h6> Collaborate with specialists, nurses, and allied healthcare professionals to provide</h6> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMN 3: Applicants + Matched Profiles -->
+    <div class="col-xl d-flex flex-column px-0 " style="width: 40%; gap: 18px;">
+
+      <!-- Row 1: Applicants -->
+      <div class="card shadow-sm border-0 p-2" >
+        <h6 class="fw-semibold mb-2 " style="font-family: Poppins; font-weight: 600;">APPLICANTS</h6>
+        <div class="row g-2 p-0">
+            <div class="col-md-6 border-0 g-3  rounded-1">
+              <div class="card p-0 border-1 align-items-start  rounded-1">
+                <div class="  d-flex flex-row p-1">
+                    <img src="./blumberr/A MBBS Girl.png" class="rounded " style="width: 45px; height: 45px; border-radius: 10px;">
+                      <div>
+                        <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;"> Kaviya</h6>
+                        <small class="fw-semibold px-1"  style="font-family: Poppins; font-style: normal; font-weight: 400;"> Senior physician</small><br>
+                            
+                      </div>
+                  </div>
+                
+                  <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka<i class="me-1"></i> <i class=" bi bi-briefcase-fill me-1"></i>5+ Years</small>
+                </div>
+              </div>
+
+            <div class="col-md-6 border-0 g-3  rounded-1" >
+                <div class="card p-0 border-1 align-items-start s rounded-1">
+                        <div class=" d-flex flex-row p-1">
+                                <img src="./blumberr/A man with specs profile.png" class="rounded " style="width: 45px; height: 45px; border-radius: 10px;">
+                                <div>
+                                    <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;">Ashok Kumar</h6>
+                                    <small class="fw-semibold px-1"  style="font-family: Poppins; font-style: normal; font-weight: 400;">Senior physician</small><br>
+                                
+                                </div>
+                        </div>  
+               
+                        <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka<i class="me-1"></i> <i class="bi bi-briefcase-fill me-1"></i>5+ Years</small>
+                </div>   
+            </div>
+            <div class="col-md-6 border-0 g-3 rounded-1">
+              <div class="card p-0 border-1 align-items-start  rounded-1">
+                <div class=" d-flex flex-row p-1  rounded-1 ">
+                    <img src="./blumberr/Doctor.png" class="rounded" style="width: 45px; height: 45px; border-radius: 10px;">
+                    <div>
+                        <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;">Vijay</h6>
+                        <small class="fw-semibold px-1"  style="font-family: Poppins; font-style: normal; font-weight: 400;">Senior physician</small><br>
+                        
+                    </div>
+                </div>
+                <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka <i class="me-1"></i><i class="bi bi-briefcase-fill me-1"></i>5+ Years</small>
+            </div>
+            </div>
+            <div class="col-md-6 border-0 g-3 rounded-1">
+              <div class="card p-0 border-1  align-items-start  rounded-1">
+                <div class=" d-flex flex-row p-1 ">
+                    <img src="./blumberr/Medical lab assistant profile.png" style="width: 45px; height: 45px; border-radius: 10px;">
+                    <div>
+                        <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;">Samantha</h6>
+                        <small class="fw-semibold px-1"  style="font-family: Poppins; font-style: normal; font-weight: 400;">Senior physician</small><br>
+                        
+                    </div>
+                </div>
+                <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka<i class="me-1"></i> <i class="bi bi-briefcase-fill me-1"></i>5+ Years</small>
+              </div>
+            </div>
+            <!-- <div class="g-2"></div> -->
+          <div class="col-md-6 border-0 g-3 rounded-1">
+              <div class="card p-0 border-1 align-items-start  rounded-1">
+                <div class=" d-flex flex-row p-1">
+                    <img src="./blumberr/A MBBS Girl.png" class="rounded" style="width: 45px; height: 45px; border-radius: 10px;">
+                    <div>
+                        <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;">Priyanka Mohan</h6>
+                        <small class="fw-semibold px-1"  style="font-family: Poppins; font-style: normal; font-weight: 400;">Senior physician</small><br>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka <i class="me-1"></i><i class="bi bi-briefcase-fill me-1"></i>5+ Years</small>
+              </div>
+            </div>
+            <div class="col-md-6 border-0 g-3 rounded-1">
+              <div class="card p-0 border-1 align-items-start  rounded-1">
+                <div class="  d-flex flex-row p-1 ">
+                    <img src="./blumberr/Medical shop assistant profile.png" class="rounded" style="width: 45px; height: 45px; border-radius: 10px;">
+                    <div>
+                        <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;">Abirami</h6>
+                        <small class="fw-semibold px-1"  style="font-family: Poppins; font-style: normal; font-weight: 400;">Senior physician</small><br>
+                        
+                    </div>
+                </div>
+                <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka <i class="me-1"></i><i class="bi bi-briefcase-fill me-1"></i>5+ Years</small>
+              </div>
+            </div>
+            <div class="col-md-6 border-0 g-3 rounded-1">
+              <div class="card p-0 border-1 align-items-start  rounded-1">
+                <div class=" d-flex flex-row p-1 ">
+                    <img src="./blumberr/A man with specs profile.png" class="rounded" style="width: 45px; height: 45px; border-radius: 10px;">
+                    <div>
+                        <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;">Ashok Kumar</h6>
+                        <small class="fw-semibold px-1"  style="font-family: Poppins; font-style: normal; font-weight: 400;">Senior physician</small><br>
+                        
+                    </div>
+                </div>
+                <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka <i class="me-1"></i><i class="bi bi-briefcase-fill me-1"></i>5+ Years</small>
+              </div>
+            </div>
+            <div class="col-md-6 border-0 g-3 rounded-1">
+              <div class="card p-0 border-1 align-items-start  rounded-1">
+                <div class="   d-flex flex-row p-1 ">
+                    <img src="./blumberr/Nurse Profile Photo.png" class="rounded" style="width: 45px; height: 45px; border-radius: 10px;">
+                    <div>
+                        <h6 class="mb-0 fw-semibold px-1" style="font-family: Poppins; font-style:medium; font-weight: 500;" >Kaviya</h6>
+                        <small class="fw-semibold px-1" style="font-family: Poppins; font-style: normal; font-weight: 400;">Senior physician</small><br>
+                        
+                    </div>
+                </div>
+                <small class="text-muted text-secondary" style="font-family: Poppins; font-style: normal; font-weight: 400;"><i class="bi bi-geo-alt-fill me-1"></i>Bengaluru, Karnataka <i class="me-1"></i><t></t><i class="bi bi-briefcase-fill me-1"></i>5+ Years</small>
+              </div>
+            </div>
+
+          
+        </div>
+      </div>
+
+      <!-- Row 2: Matched Profiles -->
+        <div class="shadow-sm rounded-1 p-1 " style="background-color: white;">
+            <div class="row">
+                <div class="fw-bold text-uppercase mb-0 px-4"> Blumberr Matched Profiles</div>
+            </div>
+        </div>  
+      <div class="  rounded-4 p-1">
+        
+        <div class="row ">
+          <div class="col-3 gx-3">
+            <div class="card text-center shadow-sm border-0 rounded-4 p-0">
+              <div class="card-body p-1">
+                <img src="./blumberr/1.png" class="rounded-circle mb-1" style="width: 50px; height: 50px; border-radius: 100px;">
+                <h6 class="mb-0 fw-semibold" style="font-family: Poppins; font-weight: 600; font-size: 14px; line-height: 150%; text-align: center;">Hari</h6>
+                <small class="text-secondary" style="font-family: Poppins; font-weight: 500; font-style: medium; line-height: 150%; text-align: center;">Senior physician</small><br>
+                <small class="text-primary" style="font-family: Poppins; font-weight: 500; font-style: medium; font-size: 12px; line-height: 150%;">Bengaluru . 7 Years</small>
+              </div>
+              <div class="card-footer text-white fw-semibold py-1 rounded-bottom-4" style="background: linear-gradient(to right, #fd7e14, #dc3545); font-family: Poppins; font-style: medium; font-weight: 500; font-size: 12px; line-height: 150%; text-align: center;"">
+                Match 10/10
+              </div>
+            </div>
+          </div>
+          <div class="col-3 gx-3 ">
+            <div class=" card text-center shadow-sm border-0 rounded-4">
+              <div class="card-body p-1">
+                <img src="./blumberr/Nurse Profile Photo.png" class="rounded-circle mb-1" style="width: 50px; height: 50px; border-radius: 100px;">
+                <h6 class="mb-0 fw-semibold"style="font-family: Poppins; font-weight: 600; font-size: 14px; line-height: 150%; text-align: center;">Nivetha</h6>
+                <small class="text-muted" style="font-family: Poppins; font-weight: 500; font-style: medium; line-height: 150%; text-align: center;">Senior physician</small><br>
+                <small class="text-primary" style="font-family: Poppins; font-weight: 500; font-style: medium; font-size: 12px; line-height: 150%;">Bengaluru . 7 Years</small>
+              </div>
+              <div class="card-footer text-white fw-semibold py-1 rounded-bottom-4" style="background: linear-gradient(to right, #fd7e14, #dc3545); font-family: Poppins; font-style: medium; font-weight: 500; font-size: 12px; line-height: 150%; text-align: center;">
+                Match 9/10
+              </div>
+            </div>
+          </div>
+          <div class="col-3 gx-3">
+            <div class="card text-center shadow-sm border-0 rounded-4">
+              <div class="card-body p-1">
+                <img src="./blumberr/Nurse Profile Photo.png" class="rounded-circle mb-1"style="width: 50px; height: 50px; border-radius: 100px;">
+                <h6 class="mb-0 fw-semibold" style="font-family: Poppins; font-weight: 600; font-size: 14px; line-height: 150%; text-align: center;">Veni</h6>
+                <small class="text-muted" style="font-family: Poppins; font-weight: 500; font-style: medium; line-height: 150%; text-align: center;">Senior physician</small><br>
+                <small class="text-primary" style="font-family: Poppins; font-weight: 500; font-style: medium; font-size: 12px; line-height: 150%;">Bengaluru . 7 Years</small>
+              </div>
+              <div class="card-footer text-white fw-semibold py-1 rounded-bottom-4" style="background: linear-gradient(to right, #fd7e14, #dc3545); font-family: Poppins; font-style: medium; font-weight: 500; font-size: 12px; line-height: 150%; text-align: center;">
+                Match 9/10
+              </div>
+            </div>
+          </div>
+          <div class="col-3 gx-3" >
+            <div class="card text-center shadow-sm border-0 rounded-4">
+              <div class="card-body p-1">
+                <img src="./blumberr/A man with specs profile.png" class="rounded-circle mb-1" style="width: 50px; height: 50px; border-radius: 100px;">
+                <h6 class="mb-0 fw-semibold" style="font-family: Poppins; font-weight: 600; font-size: 14px; line-height: 150%; text-align: center;">Santhosh</h6>
+                <small class="text-muted" style="font-family: Poppins; font-weight: 500; font-style: medium; line-height: 150%; text-align: center;">Senior physician</small><br>
+                <small class="text-primary" style="font-family: Poppins; font-weight: 500; font-style: medium; font-size: 12px; line-height: 150%;">Bengaluru . 7 Years</small>
+              </div>
+              <div class="card-footer text-white fw-semibold py-1 rounded-bottom-4" style="background: linear-gradient(to right, #fd7e14, #dc3545); font-family: Poppins; font-style: medium; font-weight: 500; font-size: 12px; line-height: 150%; text-align: center;">
+           
+                Match 9/10
+              </div>
+            </div>
+          </div>
+          
+         
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List with Array + map()</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px 10px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>To-Do List</h2>
+
+    <input type="text" id="name1" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+
+    <table id="todoid">
+        <thead>
+            <tr>
+               
+                <th>Task</th>
+                <th> Status</th>
+                <th> Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        let tasks = [];
+        
+        //var status="completed";
+        
+        function addTask() {
+            const input = document.getElementById("name1");
+            const taskText = input.value.trim();
+
+            if (taskText !== "") {
+                tasks.push(taskText);
+                input.value = "";
+                updateTable();
+            }
+        }
+        function status1(){
+           const s=document.getElementById("status").innerHTML="Complete";
+          
+            updateTable();
+        }
+         function deleteTask(index) {
+            tasks.splice(index, 1); // Remove task at index
+            updateTable(); // Re-render table
+        }
+
+
+        function updateTable() {
+            const tbody = document.querySelector("#todoid tbody");
+
+            // Clear the table body
+            tbody.innerHTML = "";
+
+            // Use .map() to generate table rows and insert them
+            const rows = tasks.map((task,s) => {
+                return `
+                    <tr>
+                        
+                        <td>${task}</td>
+                        <td>
+                           <button onclick='status1()' id="status"> Progress</button>
+                        </td>
+                        <td>
+                            <button onclick='deleteTask()'> Delete</button>
+                        </td>   
+                    </tr>
+                `;
+            });
+
+            // Set the table body's inner HTML to the joined rows
+            tbody.innerHTML = rows.join("");
+        }
+    </script>
+
+</body>
+</html>

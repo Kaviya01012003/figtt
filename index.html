@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px 10px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        button.status-btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>To-Do List</h2>
+
+    <input type="text" id="name1" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+
+    <table id="todoid">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            const input = document.getElementById("name1");
+            const taskText = input.value.trim();
+
+            if (taskText !== "") {
+                tasks.push({ text: taskText, status: "Progress" });  // store as object with status
+                input.value = "";
+                updateTable();
+            }
+        }
+
+        function Status(index) {
+            // Toggle between Progress and Complete
+            tasks[index].status = tasks[index].status === "Progress" ? "Complete" : "Progress";
+            
+            updateTable();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            updateTable();
+        }
+
+        function updateTable() {
+            const tbody = document.querySelector("#todoid tbody");
+            tbody.innerHTML = "";
+
+            const rows = tasks.map((task, index) => {
+                return `
+                    <tr>
+                        <td>${task.text}</td>
+                        <td>
+                            <button class="status-btn" onclick="Status(${index})">${task.status}</button>
+                        </td>
+                        <td>
+                            <button onclick="deleteTask(${index})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = rows.join("");
+        }
+    </script>
+<i class="fa fa-envelope" style="font-size:36px"></i>
+</body>
+</html>

@@ -1,0 +1,219 @@
+body{
+  font-family: "inter";
+}
+body div{
+  background-position-x: center;
+}
+
+.line-cloud{
+    width: 450px;
+}
+.line-img{
+    width: 180px;
+}
+.flex-img img{
+  width: 100%;
+  max-width: 200px;
+   border-radius: 12px;
+}
+
+.max-w-2xs .head{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+}
+.max-w-2xs .sub-text{
+text-align: left;
+font-weight: 400;
+font-size: 13px;
+line-height: 173%;
+letter-spacing: 0%;
+color: rgba(24, 25, 28, 1);
+}
+
+.cc-services .card-horizontal{
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(42px);
+  -webkit-backdrop-filter: blur(42px); 
+  padding: 0.5rem;
+}
+.card-horizontal h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  margin: 1rem 0;
+}
+.card-horizontal p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;   
+}
+
+.your-cc-services .card {
+  border-radius: 14px;
+  border: 1px solid rgba(213, 212, 219, 1);
+  border-top: none;
+  /* align-items: stretch; */
+  text-align: left;
+}
+
+.card-body h4{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: rgba(24, 25, 28, 1);
+    text-align: left;
+}
+.card-body p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 173%;
+    letter-spacing: 0;
+    color: rgba(24, 25, 28, 1);
+    text-align: left;
+}
+.card-title{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color: rgba(24, 25, 28, 1);
+    margin-top: 1rem;
+}
+.card-text{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 173%;
+    letter-spacing: 0;
+    color: rgba(24, 25, 28, 1);
+       margin-top: 1rem;
+}
+.cloud-mix br {
+  display: none;
+}
+.streamline-cardtitle{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color: rgba(24, 25, 28, 1);
+    margin-top: 1rem;
+    text-align: left;
+}
+.streamline-cardtext{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 173%;
+    letter-spacing: 0;
+    color: rgba(24, 25, 28, 1);
+    text-align: left;
+    margin-top: 1rem;
+}
+.gradient-left {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.3));
+}
+.gradient-right {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+}
+.optimize-card  h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 1);
+}
+.optimize-card  p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+/* media screen */
+@media (max-width: 1024px) {
+.line-cloud {
+    width: 300px;
+  }
+  .line-img {
+    width: 140px;
+  }
+   .left-cloud div {
+    font-size: 32px;
+   }
+  .left-cloud p {
+    font-size: 14px;
+    text-align: justify;
+  }
+.cloud-mix br {
+    display: inline;
+}
+}
+@media (max-width: 768px) {  
+  .line-cloud {
+    width: 160px;
+  }
+  .line-img {
+    width: 120px;
+  }
+  .left-cloud{
+    align-items: center;
+  }
+    .left-cloud div {
+    font-size: 26px;
+    line-height: 130%;
+  }
+  .left-cloud p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+.line-cloud {
+    width: 100px;
+  }
+  .line-img {
+    width: 100px;
+  }
+}
+
+
+input[type="radio"]#tab1:checked + label .tab-border,
+input[type="radio"]#tab2:checked + label .tab-border,
+input[type="radio"]#tab3:checked + label .tab-border {
+  border-color: #F6048D;
+  /* background: rgba(246, 4, 141, 0.1); */
+}
+input[type="radio"]#tab1:checked + label p,
+input[type="radio"]#tab2:checked + label p,
+input[type="radio"]#tab3:checked + label p {
+  color:black;
+}
+input[type="radio"]#tab1:checked + label span,
+input[type="radio"]#tab2:checked + label span,
+input[type="radio"]#tab3:checked + label span {
+  color:rgba(1, 2, 5, 1);
+}
+
+input[type="radio"]#tab1:checked + label .tab-head,
+input[type="radio"]#tab2:checked + label .tab-head,
+input[type="radio"]#tab3:checked + label .tab-head{
+  background: linear-gradient( to right, #B31AEF 0%, #F6048D 19.07%, #F88C54 47.52%, #FF7670 60.87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
